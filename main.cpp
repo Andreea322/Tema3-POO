@@ -140,10 +140,10 @@ int main() {
     std::string raspunsVerificare;  
     std::cout<<"\nVrei sa verifici vreo rezervare? ";
     std::cin>>raspunsVerificare;
-   
-    while(raspunsVerificare=="Da" || raspunsVerificare=="da"){
-        std::vector<int> coduriInt;
-        std::vector<std::string>coduriString;
+    std::vector<int> coduriInt;
+    std::vector<std::string>coduriString;
+    
+    if(raspunsVerificare=="Da" || raspunsVerificare=="da"){
         std::vector<std::string> biblioteci= { "FMI", "Drept", "Litere", "Istorie"};
 
         for( const auto& numeBib:biblioteci){
@@ -154,7 +154,9 @@ int main() {
                     coduriString.push_back(r.genereazaCodClient());
                 }
             }
-        }
+        } 
+    }
+    while(raspunsVerificare=="Da" || raspunsVerificare=="da"){
          std::cout<<"\nCum doresti sa cauti?\n";
          std::cout<<"1. Dupa codul unic\n";
          std::cout<<"2. Dupa codul complet\n";
