@@ -4,8 +4,7 @@
 #include "bibliotecaLitere.h"
 #include "bibliotecaIstorie.h"
 
-Biblioteca*
-BibliotecaFactory::creeazaBiblioteca( const std::string& tip, const std::string& nume,const std::string& locatie) {
+Biblioteca* BibliotecaFactory::creeazaBiblioteca( const std::string& tip, const std::string& nume,const std::string& locatie) {
     if(tip=="FMI")
         return new BibliotecaFMI(nume,locatie);
 
